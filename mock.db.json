@@ -1,0 +1,411 @@
+{
+  "get_orders": {
+    "orders": [
+      {
+        "id": 1,
+        "model_id": 1,
+        "quantity": 1000,
+        "order_type": "gos"
+      },
+      {
+        "id": 2,
+        "model_id": 2,
+        "quantity": 1,
+        "order_type": "gos"
+      },
+      {
+        "id": 3,
+        "model_id": 3,
+        "quantity": 5000,
+        "order_type": "retail"
+      },
+      {
+        "id": 4,
+        "model_id": 4,
+        "quantity": 1000000,
+        "order_type": "retail"
+      },
+      {
+        "id": 5,
+        "model_id": 5,
+        "quantity": 294340,
+        "order_type": "retail"
+      },
+      {
+        "id": 6,
+        "model_id": 6,
+        "quantity": 421341,
+        "order_type": "retail"
+      }
+    ]
+  },
+  "get_models": {
+    "models": [
+      {
+        "id": 1,
+        "vendor_id": 1,
+        "name": "Patriot",
+        "wheeldrive": "4wd",
+        "significance": 1000000,
+        "price": 2990,
+        "prod_cost": 1300,
+        "engineer_id": 1,
+        "factory_id": 1,
+        "sales": 11000
+      },
+      {
+        "id": 2,
+        "vendor_id": 1,
+        "name": "PatrNoEngine",
+        "wheeldrive": "4wd",
+        "significance": 1000000,
+        "price": 2990,
+        "prod_cost": 1300,
+        "engineer_id": 1,
+        "factory_id": 1,
+        "sales": 10001
+      },
+      {
+        "id": 3,
+        "vendor_id": 1,
+        "name": "Buhanka",
+        "wheeldrive": "4wd",
+        "significance": 1000000,
+        "price": 2990,
+        "prod_cost": 1300,
+        "engineer_id": 1,
+        "factory_id": 1,
+        "sales": 15000
+      },
+      {
+        "id": 4,
+        "vendor_id": 14,
+        "name": "Qashqai",
+        "wheeldrive": "fwd",
+        "significance": 100,
+        "price": 5000,
+        "prod_cost": 2600,
+        "engineer_id": 18,
+        "factory_id": 14,
+        "sales": 11000000
+      },
+      {
+        "id": 5,
+        "vendor_id": 15,
+        "name": "Megane",
+        "wheeldrive": "fwd",
+        "significance": 100,
+        "price": 5000,
+        "prod_cost": 3250,
+        "engineer_id": 19,
+        "factory_id": 15,
+        "sales": 394340
+      },
+      {
+        "id": 6,
+        "vendor_id": 21,
+        "name": "318",
+        "wheeldrive": "rwd",
+        "significance": 200,
+        "price": 6000,
+        "prod_cost": 3900,
+        "engineer_id": 23,
+        "factory_id": 21,
+        "sales": 422341
+      }
+    ]
+  },
+  "get_components": {
+    "components": [
+      {
+        "id": 1,
+        "vendor_id": 1,
+        "type_id": 1,
+        "name": "ZMZ406",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 2,
+        "vendor_id": 15,
+        "type_id": 2,
+        "name": "K4M",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 3,
+        "vendor_id": 15,
+        "type_id": 3,
+        "name": "D4F",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 4,
+        "vendor_id": 15,
+        "type_id": 2,
+        "name": "F7R",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 5,
+        "vendor_id": 15,
+        "type_id": 2,
+        "name": "K9K",
+        "additional_info": "diesel"
+      },
+      {
+        "id": 6,
+        "vendor_id": 15,
+        "type_id": 1,
+        "name": "P9X",
+        "additional_info": "diesel"
+      },
+      {
+        "id": 7,
+        "vendor_id": 14,
+        "type_id": 2,
+        "name": "MR20DE",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 8,
+        "vendor_id": 14,
+        "type_id": 2,
+        "name": "QR20DE",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 9,
+        "vendor_id": 14,
+        "type_id": 3,
+        "name": "VH45DE",
+        "additional_info": "petrol"
+      },
+      {
+        "id": 10,
+        "vendor_id": 14,
+        "type_id": 4,
+        "name": "QD32",
+        "additional_info": "diesel"
+      },
+      {
+        "id": 11,
+        "vendor_id": 15,
+        "type_id": 6,
+        "name": "RRD",
+        "additional_info": "diesel"
+      },
+      {
+        "id": 12,
+        "vendor_id": 21,
+        "type_id": 5,
+        "name": "EV",
+        "additional_info": "EvEngine"
+      },
+      {
+        "id": 13,
+        "vendor_id": 15,
+        "type_id": 6,
+        "name": "RenaultDoorFL",
+        "additional_info": "Red"
+      },
+      {
+        "id": 14,
+        "vendor_id": 15,
+        "type_id": 7,
+        "name": "RenaultDoorFR",
+        "additional_info": "Red"
+      },
+      {
+        "id": 15,
+        "vendor_id": 15,
+        "type_id": 8,
+        "name": "RenaultDoorBL",
+        "additional_info": "Red"
+      },
+      {
+        "id": 16,
+        "vendor_id": 15,
+        "type_id": 9,
+        "name": "RenaultDoorBR",
+        "additional_info": "Red"
+      },
+      {
+        "id": 17,
+        "vendor_id": 14,
+        "type_id": 6,
+        "name": "NissanDoorFL",
+        "additional_info": "Yellow"
+      },
+      {
+        "id": 18,
+        "vendor_id": 14,
+        "type_id": 7,
+        "name": "NissanDoorFR",
+        "additional_info": "Yellow"
+      },
+      {
+        "id": 19,
+        "vendor_id": 14,
+        "type_id": 8,
+        "name": "NissanDoorBL",
+        "additional_info": "Yellow"
+      },
+      {
+        "id": 20,
+        "vendor_id": 14,
+        "type_id": 9,
+        "name": "NissanDoorBR",
+        "additional_info": "Yellow"
+      },
+      {
+        "id": 21,
+        "vendor_id": 21,
+        "type_id": 6,
+        "name": "BMWEvDoorFL",
+        "additional_info": "Black"
+      },
+      {
+        "id": 22,
+        "vendor_id": 21,
+        "type_id": 7,
+        "name": "BMWEvDoorFR",
+        "additional_info": "Black"
+      },
+      {
+        "id": 23,
+        "vendor_id": 21,
+        "type_id": 8,
+        "name": "BMWEvDoorBL",
+        "additional_info": "Black"
+      },
+      {
+        "id": 24,
+        "vendor_id": 21,
+        "type_id": 9,
+        "name": "BMWEvDoorBR",
+        "additional_info": "Black"
+      },
+      {
+        "id": 25,
+        "vendor_id": 14,
+        "type_id": 12,
+        "name": "RS6F94R",
+        "additional_info": "MT 6-speed"
+      },
+      {
+        "id": 26,
+        "vendor_id": 14,
+        "type_id": 14,
+        "name": "JF010E",
+        "additional_info": "CVT"
+      },
+      {
+        "id": 27,
+        "vendor_id": 15,
+        "type_id": 12,
+        "name": "JH1",
+        "additional_info": "MT 5-speed"
+      },
+      {
+        "id": 28,
+        "vendor_id": 15,
+        "type_id": 13,
+        "name": "DP2",
+        "additional_info": "AT 3-speed"
+      },
+      {
+        "id": 29,
+        "vendor_id": 21,
+        "type_id": 15,
+        "name": "DCT",
+        "additional_info": "Robot"
+      },
+      {
+        "id": 30,
+        "vendor_id": 21,
+        "type_id": 13,
+        "name": "6HP19",
+        "additional_info": "AT 6-speed"
+      }
+    ]
+  },
+  "get_types": {
+    "types": [
+      {
+        "id": 1,
+        "type": "engine",
+        "additional_info": "v6"
+      },
+      {
+        "id": 2,
+        "type": "engine",
+        "additional_info": "i4"
+      },
+      {
+        "id": 3,
+        "type": "engine",
+        "additional_info": "v8"
+      },
+      {
+        "id": 4,
+        "type": "engine",
+        "additional_info": "i6"
+      },
+      {
+        "id": 5,
+        "type": "engine",
+        "additional_info": "electric"
+      },
+      {
+        "id": 6,
+        "type": "door",
+        "additional_info": "front left"
+      },
+      {
+        "id": 7,
+        "type": "door",
+        "additional_info": "front right"
+      },
+      {
+        "id": 8,
+        "type": "door",
+        "additional_info": "back left"
+      },
+      {
+        "id": 9,
+        "type": "door",
+        "additional_info": "back right"
+      },
+      {
+        "id": 10,
+        "type": "bumped",
+        "additional_info": "front"
+      },
+      {
+        "id": 11,
+        "type": "bumper",
+        "additional_info": "back"
+      },
+      {
+        "id": 12,
+        "type": "transmission",
+        "additional_info": "manual"
+      },
+      {
+        "id": 13,
+        "type": "transmission",
+        "additional_info": "automatic"
+      },
+      {
+        "id": 14,
+        "type": "transmission",
+        "additional_info": "variator"
+      },
+      {
+        "id": 15,
+        "type": "transmission",
+        "additional_info": "robot"
+      }
+    ]
+  }
+}

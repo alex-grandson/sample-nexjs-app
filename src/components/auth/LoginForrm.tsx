@@ -1,18 +1,35 @@
-import { Button, Input } from '@chakra-ui/react'
+import { Button, Checkbox, Input } from '@chakra-ui/react'
+import { FC, useContext } from 'react'
 
-import { FC } from 'react'
+import { Context } from '../../pages/_app'
 import { useFormik } from 'formik'
+import { useRouter } from 'next/router'
 
 interface ILoginParams {
   username: string
-  password: string
+  isCountry: boolean
 }
 
-const LoginForm: FC = () => {
+/*
+ * Форма логина юзера
+ */
+const LoginForm: FC = ({ onClose }: any) => {
+  const router = useRouter()
+  const { auth } = useContext(Context)
+
+  /*
+   * Работа с формой
+   * Дефолтные значения, отправка с запоминанием данных,
+   * Редирект после входа
+   */
   const formik = useFormik({
-    initialValues: { username: '', password: '' },
+    initialValues: { isCountry: true, username: '' } as ILoginParams,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2))
+      auth.setAuth(values.username, values.isCountry ? 'country' : 'vendor')
+      onClose()
+      router.push(values.isCountry ? '/country' : '/vendor')
+
+      // alert(JSON.stringify(values, null, 2))
     },
   })
   return (
@@ -23,16 +40,19 @@ const LoginForm: FC = () => {
         name='username'
         onChange={formik.handleChange}
         value={formik.values.username}
+        type={'text'}
         mb={4}
       />
-      <Input
-        placeholder='Пароль'
+      <Checkbox
         size='lg'
-        name='password'
-        onChange={formik.handleChange}
-        value={formik.values.password}
         mb={4}
-      />
+        colorScheme='blue'
+        onChange={formik.handleChange}
+        name={'isCountry'}
+        isChecked={formik.values.isCountry}
+      >
+        Я страна
+      </Checkbox>
       <Button w={'100%'} type='submit'>
         Вход
       </Button>

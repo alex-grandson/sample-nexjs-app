@@ -16,18 +16,19 @@ import { FC } from 'react'
 interface IAuthModelProps {
   title: string
   text?: string
+  isOpen: boolean
 }
 
 const AuthModal: FC<ModalProps & IAuthModelProps> = ({
   isOpen,
-  onClose,
   title,
+  onClose,
   text,
   children,
   ...props
 }: ModalProps & IAuthModelProps) => {
   return (
-    <Modal isOpen={isOpen} onClose={onClose} isCentered>
+    <Modal isOpen={isOpen} onClose={onClose} isCentered {...props}>
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
