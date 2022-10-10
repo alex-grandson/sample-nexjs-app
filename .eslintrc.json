@@ -23,16 +23,6 @@
         "allowSeparatedGroups": false
       }
     ],
-    "sort-keys": [
-      "error",
-      "asc",
-      {
-        "caseSensitive": true,
-        "natural": true,
-        "minKeys": 2
-      }
-    ],
-    "sort-vars": ["error", { "ignoreCase": true }],
     "max-lines": [
       "error",
       {

@@ -11,6 +11,7 @@ import LoginForm from '../components/auth/LoginForrm'
  */
 const Index = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
     <>
       <Container height='100vh'>
@@ -23,7 +24,7 @@ const Index = () => {
           </HStack>
         </Center>
         <Footer>
-          <Text textAlign={'center'}>Acadamn Inc</Text>
+          <Text textAlign={'center'}>SPb, 2022</Text>
         </Footer>
       </Container>
       <AuthModal isOpen={isOpen} onClose={onClose} title={'Вход'}>

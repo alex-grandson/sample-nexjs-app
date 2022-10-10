@@ -16,6 +16,7 @@
     "axios": "^1.1.2",
     "formik": "^2.2.9",
     "framer-motion": "^6.3.0",
+    "human-date": "^1.4.0",
     "mobx": "^6.6.2",
     "mobx-react": "^7.5.3",
     "mobx-react-lite": "^3.4.0",

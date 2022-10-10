@@ -18,8 +18,9 @@ export class Auth {
     this.type = undefined
   }
 
-  setAuth(username, type) {
+  setAuth(username, type, id) {
     this.type = type
     this.username = username
+    this.id = id
   }
 }

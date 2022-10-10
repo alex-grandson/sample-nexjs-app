@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 import AcceptOrderPage from '../components/vendor/acceptOrdertab'
+import Subsidies from '../components/vendor/Subsidies';
 
 /*
  * Страница для пользователей типа "Производитель"
@@ -18,19 +19,15 @@ const VendorPage = () => {
     <Container maxW='container.lg'>
       <Tabs isFitted variant='enclosed' isLazy>
         <TabList>
-          <Tab>Статистика</Tab>
+          <Tab>Субсидии</Tab>
           <Tab>Взять заказ</Tab>
-          <Tab>Изобрести велосипед</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>Статистика</p>
+            <Subsidies />
           </TabPanel>
           <TabPanel>
             <AcceptOrderPage />
-          </TabPanel>
-          <TabPanel>
-            <div>Изобрести велосипед</div>
           </TabPanel>
         </TabPanels>
       </Tabs>

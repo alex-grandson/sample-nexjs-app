@@ -21,11 +21,13 @@ import {
   Tr,
   useDisclosure,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 
 import CountryService from '../../http/coutryAPI'
+import { Context } from '../../pages/_app';
 
 const MakeOrderTab = () => {
+  const { auth } = useContext(Context)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [models, setModels] = useState(null)
   const [modelQuantities, setModelQuantities] = useState({})
@@ -88,11 +90,16 @@ const MakeOrderTab = () => {
               colorScheme='green'
               disabled={modelQuantities[choosenModel] == 0 || orderType == ''}
               onClick={() => {
-                CountryService.makeOrder(
-                  choosenModel,
+                console.log(models[choosenModel].id,
                   orderType,
-                  modelQuantities[choosenModel]
-                )
+                  modelQuantities[choosenModel],
+                  auth.id)
+                CountryService.createOrder(
+                  models[choosenModel].id,
+                  orderType,
+                  modelQuantities[choosenModel],
+                  auth.id
+                ).then(r => console.log(r))
                 onClose()
               }}
             >

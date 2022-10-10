@@ -2868,6 +2868,11 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
+human-date@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/human-date/-/human-date-1.4.0.tgz#88bb62bd804d00fd12ee2f47dc3c3bbb1e55f99a"
+  integrity sha512-jhEvaL0yj8LZnphQqOylapYTLB91ZIaNuDnrHqDR/3/P1Mhil1kh1qgm75xQ/qi7iZSPKIjqrEx6kw9gTcdeuA==
+
 iconv-lite@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"

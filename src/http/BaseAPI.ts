@@ -15,4 +15,12 @@ export default class BaseService {
   static async getModels() {
     return baseAPI.get('/get_models')
   }
+
+  static async getSubsidies() {
+    return baseAPI.get('/get_subsidies')
+  }
+
+  static async login(username, type) {
+    return baseAPI.get(`/login?type=${type}&name=${username}`)
+  }
 }

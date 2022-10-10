@@ -24,11 +24,13 @@ import { DarkModeSwitch } from './DarkModeSwitch'
 import Link from 'next/link'
 import { observer } from 'mobx-react-lite'
 import { useContext } from 'react'
+import { useRouter } from 'next/router';
 
 export const KursachHeader = observer(() => {
   const { colorMode } = useColorMode()
   const { auth } = useContext(Context)
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const router = useRouter()
   return (
     <>
       <Flex w={'100%'} position={'relative'}>
@@ -95,12 +97,14 @@ export const KursachHeader = observer(() => {
               colorScheme='red'
               // disabled={modelQuantities[choosenModel] == 0 || orderType == ''}
               onClick={() => {
+                auth.logout()
+                onClose()
+                router.push('/')
                 // CountryService.makeOrder(
                 //   choosenModel,
                 //   orderType,
                 //   modelQuantities[choosenModel]
                 // )
-                onClose()
               }}
             >
               Выйти

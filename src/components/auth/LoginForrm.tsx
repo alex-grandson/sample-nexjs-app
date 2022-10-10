@@ -4,6 +4,7 @@ import { FC, useContext } from 'react'
 import { Context } from '../../pages/_app'
 import { useFormik } from 'formik'
 import { useRouter } from 'next/router'
+import BaseService from '../../http/BaseAPI';
 
 interface ILoginParams {
   username: string
@@ -25,9 +26,13 @@ const LoginForm: FC = ({ onClose }: any) => {
   const formik = useFormik({
     initialValues: { isCountry: true, username: '' } as ILoginParams,
     onSubmit: (values) => {
-      auth.setAuth(values.username, values.isCountry ? 'country' : 'vendor')
+      BaseService.login(values.username, values.isCountry ? 'country' : 'vendor')
+        .then((response) => {
+          auth.setAuth(values.username, values.isCountry ? 'country' : 'vendor', response.data['UserID'])
+          router.push(values.isCountry ? '/country' : '/vendor')
+        })
+        .catch((err) => console.error(err))
       onClose()
-      router.push(values.isCountry ? '/country' : '/vendor')
 
       // alert(JSON.stringify(values, null, 2))
     },
@@ -51,10 +56,10 @@ const LoginForm: FC = ({ onClose }: any) => {
         name={'isCountry'}
         isChecked={formik.values.isCountry}
       >
-        Я страна
+          Я страна
       </Checkbox>
       <Button w={'100%'} type='submit'>
-        Вход
+          Вход
       </Button>
     </form>
   )
